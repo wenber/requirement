@@ -1,0 +1,9 @@
+
+<span data-filter="{{key}}">
+	<label>第{{i}}程</label>
+	<span>
+		{{#list}}
+	    <label><input name="{{key}}" type="checkbox" {{#checked}}checked="checked"{{/checked}} value="{{value}}" class="inp_chk">{{label}}</label>
+		{{/list}}
+	</span>
+</span>

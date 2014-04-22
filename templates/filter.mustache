@@ -1,0 +1,8 @@
+<div class="m_sep_full" data-filter="{{key}}">
+    <span class="time_lab">{{name}}</span>
+    <span class="time_sel">
+	    {{#list}}
+        <label><input name="{{key}}" type="checkbox" {{#checked}}checked="checked"{{/checked}} value="{{value}}" class="inp_chk">{{label}}</label>
+	    {{/list}}
+    </span>
+</div>

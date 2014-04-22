@@ -1,0 +1,70 @@
+<div class="ser-list{{#state}} avt_column_on{{/state}}{{#clicked}} avt_column_clicked{{/clicked}}" id="{{key}}">
+    <div class="ser_column avt_column_trans_dc no-two-way">
+        <!--第1程-->
+	    {{#list}}
+        <div class="b_avt_lst">
+            <div class="ser-line-tit">
+                <div class="ser-l-c1"><span>第<i>{{index}}</i>程</span>&nbsp;&nbsp;&nbsp;{{dep_city}}-{{arr_city}}</div>
+                <div class="ser-l-c2">{{dur}}</div>
+                <br class="clear">
+            </div>
+            <div class="avt_trans">
+                <!--直飞模块 注：该模块与中转模块代码一样-->
+                <div class="avt_column_1st">
+                    <div class="c0">
+                        <div class="a_logo"><img height="16" width="16" src="http://source.qunar.com/site/images/airlines/small/{{carrier_code}}.gif" alt="{{carrier_full}}" title="{{carrier_full}}"></div>
+                    </div>
+                    <div class="c1">
+                        <div class="a_name">{{carrier}}</div>
+                        <div class="a_model"><strong>{{flight_num}}</strong> {{plane}}</div>
+                    </div> 
+                    <div class="c2"> 
+                        <div class="a_tm_arv">{{dep_time}}</div>
+                        <div class="a_tm_arv">{{arr_time}}</div>
+                    </div>   	
+                    <div class="c3">
+	                    <div class="a_local_arv">{{dep_airport}}</div>
+                        <div class="a_local_arv">{{arr_airport}}</div>
+                    </div>
+                </div>
+                <!--//直飞模块-->
+            </div>
+            <div class="c4">
+                <div class="vlc_wp_time">
+                    <i class="vlc_ref"></i>
+                    <div class="vlc_cont"><p>{{type}}</p></div>
+                </div>     
+            </div>    
+             <div class="c5">
+                <div class="vlc_wp_time" data-more-tips>
+                    <i class="vlc_ref"></i>
+                    <div class="vlc_cont"><p><{{more_flight_btn}}  href="javascript:;" data-key="{{price_key}}" data-flight="{{flight_key}}" data-btn-more>更多航班</{{more_flight_btn}}></p><div class="more-line-p">选择相同价位其他航班。<br><a href="#" data-close-tips>知道了</a><span title="关闭" data-close-tips></span><i></i></div></div>
+                </div>
+             </div>
+         </div>
+
+        <!--//第1程-->
+        <!--价位&订票-->
+	    {{#price}}
+        <div class="ser-dotted">
+            <div class="ser-fly-sub b_avt_lst">
+                <div class="c6"> 
+                    <div class="a_low_prc">
+                    <em class="r_txt">{{price_label}}</em>{{{price}}}<i class="rmb">&yen;</i>
+                    </div>
+                    <div class="a_prc_tax"><em class="r_txt">{{tax_label}}</em>{{#show_tax}}<span class="hv"><i class="rmb">&yen;</i>{{tax}}</span>{{/show_tax}}</div>
+                 </div>                     
+                 <div class="c7">
+                    <div class="a_booking"><a class="btn_book" href="#" title="点击查看订票网站" hidefocus="true" data-key="{{price_key}}" data-btn-open><span><b>订&nbsp;&nbsp;票</b></span></a></div>
+                 </div>
+            </div>                    
+        </div>
+	    {{/price}}
+	    {{/list}}
+	    <div class="js-wrapper-list">
+		    {{#state}}
+			    {{&wrappers}}
+		    {{/state}}
+	    </div>
+    </div>
+</div>

@@ -1,0 +1,108 @@
+<div class="b_qvt_lst">
+    <div class="qvt_arr_t">
+        <p class="arr_o">◆</p>
+        <p class="arr_i">◆</p>
+    </div>
+    <div class="e_qvt_hd">
+        <ul>
+            <li class="cur" data-type="ap">全部报价 <span>(<a class="q_prc" href="javascript:;"><i class="rmb">&yen;</i>{{lowpr}}</a>起)</span> <em class="sep_line">|</em></li>
+        </ul>
+    </div>
+	<div class="b_spc_list">
+		<div class="wrapper-list-holder">
+		{{#list}}
+		 <div class="qvt_column" {{^visible}}style="display:none" data-hide="true"{{/visible}}>
+		     <div class="v0">
+		         {{&icon}}
+		     </div>
+		     <div class="v1">
+		         <div class="t_name" title="{{name}}">{{name}}</div>
+		     </div>
+		      <div class="v2">
+			      {{#star}}
+		          <div class="t_cmt">
+		              <div class="e_qstar">
+		                  <span data-star class="bg_qstar"><em style="width:{{kd_w}}%;" class="r"></em></span>
+		                  <div class="e_qstar_twp">
+		                      <div style="display: none;" class="p_qstar_tip">
+		                          <div class="p_qstar_cont">
+		                              <dl class="dl_score_lst">
+		                                  <dt>
+		                                      <span class="sc_lab">总分：</span>
+		                                      <span class="bg_qstar"><em style="width: {{kd_w}}%;" class="r"></em></span>
+		                                      <span class="sc_num">{{kd}}分</span>
+		                                  </dt>
+		                                  <dd>
+		                                      <span class="sc_lab">满意程度</span>
+		                                      <span class="bg_qstar"><em style="width: {{ts_w}}%;" class="r"></em></span>
+		                                      <span class="sc_num">{{ts}}分</span>
+		                                  </dd>
+		                                  <dd>
+		                                      <span class="sc_lab">网站使用</span>
+		                                      <span class="bg_qstar"><em style="width: {{dw_w}}%;" class="r"></em></span>
+		                                      <span class="sc_num">{{dw}}分</span>
+		                                  </dd>
+		                                  <dd>
+		                                      <span class="sc_lab">价格真实</span>
+		                                      <span class="bg_qstar"><em style="width: {{db_w}}%;" class="r"></em></span>
+		                                      <span class="sc_num">{{db}}分</span>
+		                                  </dd>
+		                                  <dd>
+		                                      <span class="sc_lab">售后服务</span>
+		                                      <span class="bg_qstar"><em style="width: {{ds_w}}%;" class="r"></em></span>
+		                                      <span class="sc_num">{{ds}}分</span>
+		                                  </dd>
+		                              </dl>
+		                          </div>
+		                      </div>
+		                  </div>
+		              </div>
+		              <div class="e_qscmt">
+
+		                  <span class="u_num">{{#count}}来自{{count}}位用户{{/count}}{{^count}}暂无点评{{/count}}</span>
+		                  <div class="e_btn_cmt{{#opened}} e_btn_cmt_on{{/opened}}" >
+		                      <a data-btn-cmt hidefocus="on" class="btn_cmt" href="#" data-wrapper="{{id}}">点评<i class="i_arrb_ud"></i></a>
+		                      <div class="p_cmt_twp" data-comment-holder>
+			                     {{#opened}}
+		                         {{&starRank}}
+			                     {{/opened}}
+		                      </div>
+		                  </div>
+		              </div>
+		          </div>
+			      {{/star}}
+		      </div>
+		      <div class="v3">{{&v3}}</div>
+		      <div class="v4">{{&v4}}</div>
+		      <div class="v5">
+		          <div class="t_prc">
+		              <em class="r_txt">{{price_label}} </em>
+		              <span class="prc_wp"><em class="prc">{{pr}}</em></span>
+		              <i class="rmb">&yen;</i>
+		          </div>
+		          <div class="t_prc_tax">
+		              <em class="r_txt">{{tax_label}}</em>
+		              {{#show_tax}}<span class="hv"><i class="rmb">&yen;</i><span>{{tax}}</span></span>{{/show_tax}}
+		          </div>
+		      </div>
+		      <div class="v6">
+		          <div class="t_bk">
+		              <a data-btn-booking data-wrapper="{{id}}" data-flight="{{flight_key}}" title="预 订" href="#" hidefocus="on" class="btn_book_org"><span><b>预 订</b></span></a>
+		              <div class="t_upd">
+		                 <p class="ud_time">{{up_time}}</p>
+		              </div>
+		          </div>
+		      </div>
+		 </div>
+		{{/list}}
+		 </div>
+		{{#show_more_btn}}
+	    <div class="qvt_col_more qvt_col_more_hover">
+	        <a data-btn-more_wrappers href="javascript:;" class="lnk_more" hidefocus="true">更多报价<i class="ico_arr_more"></i></a>
+	    </div>
+		{{/show_more_btn}}
+	</div>
+    <div class="qvt_col_hide">
+        <a data-btn-close data-flight="{{flight_key}}" class="lnk_more lnk_more_hd" href="javascript:;">隐藏报价<i class="ico_down"></i></a>
+    </div>
+</div>

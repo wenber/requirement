@@ -1,0 +1,57 @@
+<div id="more_flights" class="more-fly ser_column">
+<div class="more-fly-m">
+    <h2><span title="关闭" rel="modal:close"></span><strong>第{{index}}程</strong> {{dep_city}}-{{arr_city}}</h2>
+    <div class="m-f-list b_avt_lst">
+        <div class="m-f-th e_fly_th">
+            <ul>
+                <li class="c0">&nbsp;</li>
+                <li class="c1">航班信息</li>
+                <li class="c2"><a href="#" data-sort="dt">当地起降时间<i class="{{dt_cls}}"></i></a></li>
+                <li class="c3">起降机场</li>
+                <li class="c4">中转经停</li>
+                <li class="c5"><a href="#" data-sort="dur">旅行总时长<i class="{{dur_cls}}"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="m-flist-m">
+	      <div class="m-flist-ul">
+			{{#list}}
+            <!--更多航线列表-->
+            <div class="e-f-body">
+                <div class="c0">
+                    <div class="a_logo"><img height="16" width="16" src="http://source.qunar.com/site/images/airlines/small/{{carrier_code}}.gif" alt="{{carrier_full}}" title="{{carrier_full}}"></div>
+                </div>
+                <div class="c1">
+                    <p>{{carrier}}</p>
+                    <p class="modl">{{flight_num}} {{plane}}</p>
+                </div>
+                <div class="c2">
+                    <p>{{dep_time}}</p>
+                    <p class="modl">{{arr_time}}</p>
+                </div>
+                <div class="c3">
+                    <p>{{dep_airport}} {{terminal}}</p>
+                    <p class="modl">{{arr_airport}}</p>
+                </div>
+                <div class="c4">
+                    <p>{{type}}</p>
+                </div>
+                <div class="c5">
+                    <p>{{&dur}}</p>
+                </div>
+                <div class="c6">
+                    {{#choose}}
+	                <a href="javascript:void(0);" class="a-checked">已 选</a>
+                    {{/choose}}
+                    {{^choose}}
+                    <a href="javascript:void(0);" data-key="{{key}}" data-btn-choose>选 择</a><!--当用户已选该航线时 添加 className 名为[a-checked] 如第二个循环列表-->
+                    {{/choose}}
+                </div>
+            </div>
+			{{/list}}
+	      </div>
+            <!--//更多航线列表-->
+        </div>
+    </div>
+</div>
+</div>

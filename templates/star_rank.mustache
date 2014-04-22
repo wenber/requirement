@@ -1,0 +1,72 @@
+<div class="p_cmt_tip">
+	<div class="p_cmt_cont">
+		<a title="关闭" class="p_close" data-btn-cmt_close></a>
+		<h3>请对网站的服务做出点评</h3>
+		<form method="post" target="ifmPost" action="http://www.qunar.com/bookingFeedback/interface/userRemark.jsp" id="fm_{{wrid}}">
+			<input type="hidden" value="true" name="ispost" />
+			<input type="hidden" value="{{wrid}}" name="wrid" />
+			<input type="hidden" value="{{dep_airport}}" name="depCode" />
+			<input type="hidden" value="{{arr_airport}}" name="arrCode" />
+			<input type="hidden" value="{{dep_date}}" name="depDate" />
+			<input type="hidden" value="{{flight_num}}" name="flightNo" />
+			<input type="hidden" value="" name="callback" id="callbackXI296" />
+			<ul class="ul_webser_cmt">
+				{{#pickers}}
+				<li>
+					<input type="hidden" value="0" name="{{key}}" />
+					<p class="w_lab">{{label}}</p>
+					<p class="w_star">
+						<span class="bg_qstar">
+							<em style="width: {{width}}%;"></em>
+							<b class="lst_star">
+								{{#star}}
+								<i class="i_star" data-star-picker="{{.}}"></i>
+								{{/star}}
+
+							</b>
+						</span>
+					</p>
+					<a class="w_txt">{{desc}}</a>
+				</li>
+				{{/pickers}}
+
+				{{#isLogin}}
+				<li>
+					<p class="w_lab">用户名</p>
+					<p class="w_txt">{{user_name}}</p>
+				</li>
+				<li>
+					<p class="w_lab">&nbsp;</p>
+					<button class="btn btn_primary" data-cmt-submit><span><b>提交</b></span></button>
+				</li>
+				{{/isLogin}}
+
+			</ul>
+			{{^isLogin}}
+			<div class="e_login_ifo clrfix">
+				<div class="m_sep2">
+					<div class="s_lab">用户名</div>
+					<div class="s_ctl"><input type="text" data-cmt-user_name class="inp_t" /></div>
+				</div>
+				<div class="m_sep2">
+					<div class="s_lab">密码</div>
+					<div class="s_ctl">
+						<input type="password" class="inp_t" data-cmt-password />
+					</div>
+				</div>
+			</div>
+			<div class="e_login_ifo clrfix">
+				<div class="m_login">
+					<a href="#nogo" class="btn btn_primary" data-cmt-login><span><b>登录并提交</b></span></a>
+					<span class="txt_a">请登录后发表点评，没有账号? 请<a target="_blank" href="http://user.qunar.com/reg.jsp">注册</a></span>
+				</div>
+			</div>
+			{{/isLogin}}
+			<input type="hidden" name="other" />
+			<div class="e_login_ifo clrfix">
+				<div class="m_login_wwrn" data-cmt-msg></div>
+			</div>
+
+		</form>
+	</div>
+</div>

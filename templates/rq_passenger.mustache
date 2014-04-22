@@ -1,0 +1,257 @@
+<div class="peo-info" data-num="{{num}}" >
+<div class="peo-info-m">
+                <h3 ><span class="opt_remove">{{opts}}</span><p class="js_h3_p">第{{num}}位乘客</p></h3>
+                <div class="peo-tr d-tr1 zindex5">
+                    <div class="peo-td1 fleft">姓</div>
+                    <div class="peo-td2 fleft">
+                        <div class="peobox">
+                            <input type="text" class="peo-textbox inp_xing q-err" name="lastName" autocomplete="off" value="" maxlength="19"   data-jvalid-ruler="last_name_empty last_name_err last_name_space tf_last_name_space"
+                        name="lastName" data-placeholder="拼音或英文" />
+                        </div>
+                    </div>
+                    <div class="peo-td3 fleft">名</div>
+                    <div class="peo-td4 fleft">
+                        <div class="peobox">
+                            <input type="text" autocomplete="off" value="" maxlength="30"
+                           data-jvalid-ruler="first_name_empty first_name_err tf_first_name_space"
+                           class="inp_mz peo-textbox" name="firstName" data-placeholder="拼音或英文" />
+                   
+                            <span class="info-ico"></span>
+                            <div class="p_tips_cont" style=" display:none" >
+                                <div class="p_tips_wrap">
+                                    <div class="p_tips_arr p_tips_arr_t">
+                                        <p class="arr_o">◆</p>
+                                        <p class="arr_i">◆</p>
+                                    </div>
+                                    <div class="p_tips_content">
+                                        <div class="b_cjr_rule">
+                                            <h3><span class="x_remove">X</span>乘机人姓名规范</h3>
+                                            <ul class="ul_cjr_rule">
+                                                <li>乘客姓名必须与登机时所用证件上的名字一致；持护照登机的外宾，须按护照上的顺序填写，汉字请用拼音代替，姓与名用“/”区分，例如“John/Jim”。</li><li>姓名过长时请使用缩写，英文用“/”分割姓与名，如：Sheikh Khalifa bin Zayed Alyle Nahyan，简写为“Sheikh/KbZANahyan”。</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+                <div class="peo-tr zindex4">
+                    <div class="peo-td1 fleft">国籍</div>
+                    <div class="peo-td2 fleft">
+                        <div class="peobox">
+                        <input type="text" maxlength="50" autocomplete="off"
+                       data-ref="nationality" value="中国"
+                       data-jvalid-delay="true"
+                       data-jvalid-ruler="empty country_err length50"
+                       data-jvalid-zIndex="199"
+                       class="input_nt  peo-textbox" name="nationality" />
+                <div class="box_tips hide">
+                    <div class="blue_tips"></div>
+                </div>
+                        </div>
+                    </div>
+                    <div class="peo-td3 fleft">性别</div>
+                    <div class="peo-td4 fleft">
+                        <label><input type="radio" name="gender{{num}}" class="peobox-radio" checked="true" value="男">男</label>
+                        <label><input type="radio" value="女" name="gender{{num}}" class="peobox-radio">女</label>
+                    </div>
+                </div>
+                <br class="clear">
+                <!--乘客类型-->
+                <div class="peo-tr d-tr3 zindex3">
+                    <div class="peo-td1 fleft">乘客类型</div>
+                    <div class="peo-td2 fleft">
+                        <div class="peobox">
+                            <div class="sel-arraw"><b class=""></b></div> 
+                            <span class="sel-input" tabindex="0">成人&gt;12岁</span>
+                            <div class="d-arraw">
+                            <input type="hidden" name="ageType" value="成人&gt;12岁" />
+                                <ul>
+                                    <li><a href="javascript:;">成人&gt;12岁</a></li>
+                                    <li><a href="javascript:;">儿童&gt;2岁</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="peo-td3 fleft">生日</div>
+                     <div class="peo-td4 fleft">
+                     <input name="birthday" type="hidden" value=""/>
+                        <div class="peobox fleft">
+                         <div class="sel-arraw"><b class=""></b></div>
+                            <span class="sel-input" tabindex="0">1980</span>
+                               <div class="d-arraw">
+                               <input name="birthday_year" type="hidden" value="1980" />
+                                    <ul> 
+                                       
+                                    </ul>
+                            </div>                  
+                          </div>
+                        <div class="peo-td3 fleft">年</div>
+                        <div class="peobox fleft txt-small" >
+                           <div class="sel-arraw"><b class=""></b></div>
+                            <span class="sel-input" tabindex="0">01</span>
+                            <div class="d-arraw">
+                            <input type="hidden" name="birthday_month" value="01" />
+                                <ul>
+                                    <li><a href="javascript:;">01</a></li>
+                                    <li><a href="javascript:;">02</a></li>
+                                    <li><a href="javascript:;">03</a></li>
+                                    <li><a href="javascript:;">04</a></li>
+                                    <li><a href="javascript:;">05</a></li>
+                                    <li><a href="javascript:;">06</a></li>
+                                    <li><a href="javascript:;">07</a></li>
+                                    <li><a href="javascript:;">08</a></li>
+                                    <li><a href="javascript:;">09</a></li>
+                                    <li><a href="javascript:;">10</a></li>
+                                    <li><a href="javascript:;">11</a></li>
+                                    <li><a href="javascript:;">12</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="peo-td3 fleft">月</div>
+                        <div class="peobox fleft txt-small">
+                            <div class="sel-arraw"><b class=""></b></div>
+                            <span class="sel-input" tabindex="0">01</span>
+                            <div class="d-arraw">
+                            <input type="hidden" name="birthday_day" value="01" />
+                                <ul>
+                                    <li><a href="javascript:;">01</a></li>
+                                    <li><a href="javascript:;">02</a></li>
+                                    <li><a href="javascript:;">03</a></li>
+                                    <li><a href="javascript:;">04</a></li>
+                                    <li><a href="javascript:;">05</a></li>
+                                    <li><a href="javascript:;">06</a></li>
+                                    <li><a href="javascript:;">07</a></li>
+                                    <li><a href="javascript:;">08</a></li>
+                                    <li><a href="javascript:;">09</a></li>
+                                    <li><a href="javascript:;">10</a></li>
+                                    <li><a href="javascript:;">11</a></li>
+                                    <li><a href="javascript:;">12</a></li>
+                                    <li><a href="javascript:;">13</a></li>
+                                    <li><a href="javascript:;">14</a></li>
+                                    <li><a href="javascript:;">15</a></li>
+                                    <li><a href="javascript:;">16</a></li>
+                                    <li><a href="javascript:;">17</a></li>
+                                    <li><a href="javascript:;">18</a></li>
+                                    <li><a href="javascript:;">19</a></li>
+                                    <li><a href="javascript:;">20</a></li>
+                                    <li><a href="javascript:;">21</a></li>
+                                    <li><a href="javascript:;">22</a></li>
+                                    <li><a href="javascript:;">22</a></li>
+                                    <li><a href="javascript:;">23</a></li>
+                                    <li><a href="javascript:;">24</a></li>
+                                    <li><a href="javascript:;">25</a></li>
+                                    <li><a href="javascript:;">26</a></li>
+                                    <li><a href="javascript:;">27</a></li>
+                                    <li><a href="javascript:;">28</a></li>
+                                    <li><a href="javascript:;">29</a></li>
+                                    <li><a href="javascript:;">30</a></li>
+                                    <li><a href="javascript:;">31</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="peo-td3 fleft padding0">日</div>
+                    </div>
+                </div>
+                <br class="clear">
+
+
+                <!--证件-->
+                <div class="peo-tr d-tr3 zindex2">
+                    <div class="peo-td1 fleft">证件</div>
+                    <div class="peo-td2 fleft">
+                        <div class="peobox">
+                                <div class="sel-arraw"><b class="q-up"></b></div> 
+                                <span class="sel-input" tabindex="0">护照</span>
+                                 <div class="d-arraw">
+                                <input type="hidden" name="cardType" value="护照"/>
+                                <ul>
+                                    
+                                    <li><a href="javascript:;" title="护照">护照</a></li>
+                                    <li><a href="javascript:;" title="回乡证">回乡证</a></li>
+                                    <li><a href="javascript:;" title="台胞证">台胞证</a></li>
+                                    <li><a href="javascript:;" title="港澳通行证">港澳通行证</a></li>
+                                    <li><a href="javascript:;" title="国际海员证">国际海员证</a></li>
+                                    <li><a href="javascript:;" title="大陆居民往来台湾通行证">大陆居民往来台湾通行证</a></li>
+                                </ul>
+                        </div>
+                        </div>
+                        <div class="peobox num-txt">
+                             <div class="pass_peobox">
+                                <input type="text" autocomplete="off" value="" data-jvalid-ruler="card_empty cardNum length15" maxlength="15" class="input_cet peo-textbox" name="cardNum" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <br class="clear">
+
+                <!--证件签发地-->
+                <div class="peo-tr d-tr3  zindex1">
+                    <div class="peo-td1 fleft">证件签发地</div>
+                    <div class="peo-td2 fleft">
+                        <div class="peobox">
+                           
+                             <input type="text" maxlength="50" autocomplete="off"   data-ref="issue_place"  data-jvalid-delay="true"    data-jvalid-ruler="empty country_err length50" class="input_address peo-textbox" name="cardIssuePlace" value="中国" />
+
+                            <div class="box_tips hide">
+                                <div class="blue_tips"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="peo-td3 fleft">有效期</div>
+                    <div class="peo-td4 fleft">
+                       <input type="hidden" name="cardExpired" value=""/>
+                        <div class="peobox fleft">
+                               <div class="sel-arraw"><b class="q-up"></b></div> 
+                               <span class="sel-input" tabindex="0">2016</span>
+                                <div class="d-arraw">
+                                <input type="hidden" name="cardExpired_year" value=""/>
+                                <ul>
+                                </ul>                 
+                          </div>
+                             </div>
+                        <div class="peo-td3 fleft">年</div>
+                        <div class="peobox fleft txt-small" >
+                            <div class="sel-arraw"><b class=""></b></div>
+                            <span class="sel-input" tabindex="0">06</span>
+                            <div class="d-arraw">
+                            <input type="hidden" name="cardExpired_month" value="" />
+                                <ul>
+                                    <li><a href="javascript:;">01</a></li>
+                                    <li><a href="javascript:;">02</a></li>
+                                    <li><a href="javascript:;">03</a></li>
+                                    <li><a href="javascript:;">04</a></li>
+                                    <li><a href="javascript:;">05</a></li>
+                                    <li><a href="javascript:;">06</a></li>
+                                    <li><a href="javascript:;">07</a></li>
+                                    <li><a href="javascript:;">08</a></li>
+                                    <li><a href="javascript:;">09</a></li>
+                                    <li><a href="javascript:;">10</a></li>
+                                    <li><a href="javascript:;">11</a></li>
+                                    <li><a href="javascript:;">12</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="peo-td3 fleft">月</div>
+                        <div class="peobox fleft txt-small">
+                         
+                                <div class="sel-arraw"><b class=""></b></div>
+                            <span class="sel-input" tabindex="0">06</span>
+                            <div class="d-arraw">
+                            <input type="hidden" name="cardExpired_day" value="" />
+                                <ul>                                  
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="peo-td3 fleft padding0">日</div>
+                    </div>
+                </div>
+            </div>
+        </div>
